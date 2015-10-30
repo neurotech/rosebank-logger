@@ -4,7 +4,8 @@
   "description": "A centralised logging application.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker-build": "docker build -t rosebank-logger .",
+    "docker-run": "docker run -d -p 10001:1001 --restart=on-failure:5 --memory \"300M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "dependencies": {
     "hapi": "11.0.2",
     "joi": "6.9.1",
+    "moment": "2.10.6",
     "rethinkdbdash": "2.1.13"
   },
   "devDependencies": {
