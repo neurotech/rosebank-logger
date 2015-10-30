@@ -5,7 +5,7 @@ var config = {};
 config.rethinkdb = {
   db: 'rosebank_logger',
   servers: [{ host: 'localhost', port: 28015}],
-  silent: true
+  silent: false
 };
 
 config.http = {
