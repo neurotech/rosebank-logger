@@ -1,0 +1,30 @@
+{
+  "name": "rosebank-logger",
+  "version": "1.0.0",
+  "description": "A centralised logging application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurotech/rosebank-logger.git"
+  },
+  "keywords": [
+    "logs"
+  ],
+  "author": "Tim Douglas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neurotech/rosebank-logger/issues"
+  },
+  "homepage": "https://github.com/neurotech/rosebank-logger#readme",
+  "dependencies": {
+    "hapi": "11.0.2",
+    "joi": "6.9.1",
+    "rethinkdbdash": "2.1.13"
+  },
+  "devDependencies": {
+    "tape": "4.2.2"
+  }
+}
