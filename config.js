@@ -3,14 +3,19 @@
 var config = {};
 
 config.rethinkdb = {
-  db: 'rosebank_logger',
-  servers: [{ host: 'localhost', port: 28015}],
-  silent: false
+  db: process.env.ROSEBANK_LOGGER_DB,
+  servers: [
+    {
+      host: process.env.ROSEBANK_LOGGER_DBHOST,
+      port: process.env.ROSEBANK_LOGGER_DBPORT
+    }
+  ],
+  silent: true
 };
 
 config.http = {
-  host: 'localhost',
-  port: 10001
+  host: process.env.ROSEBANK_LOGGER_HTTPHOST,
+  port: process.env.ROSEBANK_LOGGER_HTTPPORT
 };
 
 module.exports = config;
