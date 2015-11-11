@@ -6,11 +6,11 @@ config.rethinkdb = {
   db: process.env.ROSEBANK_LOGGER_DB,
   servers: [
     {
-      host: process.env.ROSEBANK_LOGGER_DBHOST,
-      port: process.env.ROSEBANK_LOGGER_DBPORT
+      host: process.env.ROSEBANK_DATASTORE_HOST,
+      port: process.env.ROSEBANK_DATASTORE_PORT
     }
   ],
-  silent: true
+  silent: false
 };
 
 config.http = {

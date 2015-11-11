@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node tests/index.js",
     "docker-build": "docker build -t rosebank-logger .",
-    "docker-run": "docker run -d -p 10001:1001 --restart=on-failure:5 --memory \"300M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
+    "docker-run": "docker run -d -p 10001:10001 --link rosebank-datastore:rosebank-datastore --restart=on-failure:5 --memory \"200M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,9 @@
   "homepage": "https://github.com/neurotech/rosebank-logger#readme",
   "dependencies": {
     "async": "1.5.0",
-    "chalk": "1.1.1",
     "hapi": "11.0.2",
     "joi": "6.9.1",
+    "lodash": "3.10.1",
     "moment": "2.10.6",
     "rethinkdb-init": "0.0.5",
     "rethinkdbdash": "2.1.13"
