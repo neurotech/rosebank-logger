@@ -5,16 +5,16 @@ MAINTAINER Tim Douglas <neurotech@gmail.com>
 RUN echo "Australia/Sydney" > /etc/timezone
 ENV TZ="Australia/Sydney"
 
-# Expose ports
-EXPOSE 10001
+COPY package.json package.json
+RUN npm install
 
-# Clone repo and install dependencies
-WORKDIR /src
-RUN git clone https://github.com/neurotech/rosebank-logger.git .
-RUN npm install --unsafe-perm
+COPY . .
 
 # Cleanup
-RUN rm -rf /var/lib/apt/lists/* /tmp/* /root/.npm /root/.node-gyp
+RUN rm -rf /root/.npm
+
+# Expose ports
+EXPOSE 10001
 
 # Run the application
 CMD [ "node", "app.js" ]
