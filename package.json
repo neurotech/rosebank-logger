@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node tests/index.js",
     "docker-build": "docker build -t rosebank-logger .",
-    "docker-run": "docker run -d -p 10001:10001 --link rosebank-datastore:rosebank-datastore --restart=on-failure:5 --memory \"200M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
+    "docker-run": "docker run -d -P --net=rosebank --restart=on-failure:5 --memory \"200M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
   },
   "repository": {
     "type": "git",
