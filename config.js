@@ -14,7 +14,7 @@ config.rethinkdb = {
 };
 
 config.http = {
-  host: process.env.ROSEBANK_LOGGER_HTTPHOST,
+  host: '0.0.0.0',
   port: process.env.ROSEBANK_LOGGER_HTTPPORT
 };
 
