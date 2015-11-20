@@ -18,4 +18,10 @@ config.http = {
   port: process.env.ROSEBANK_LOGGER_HTTPPORT
 };
 
+config.mailgun = {
+  key: process.env.MAILGUN_KEY,
+  domain: process.env.MAILGUN_DOMAIN,
+  to: process.env.MAILGUN_TO
+};
+
 module.exports = config;
