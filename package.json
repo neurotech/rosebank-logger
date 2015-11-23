@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node tests/index.js",
     "docker-build": "docker build -t rosebank-logger .",
-    "docker-run": "docker run -d -P --net=rosebank --log-driver=json-file --log-opt max-size=50m --log-opt max-file=4 --restart=on-failure:5 --memory \"200M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
+    "docker-run": "docker run -d --net=rosebank --log-driver=json-file --log-opt max-size=50m --log-opt max-file=4 --restart=on-failure:5 --memory \"200M\" --env-file ~/.env/rosebank-logger_PRODUCTION.env --name rosebank-logger rosebank-logger"
   },
   "repository": {
     "type": "git",
