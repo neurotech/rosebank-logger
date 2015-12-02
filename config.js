@@ -15,7 +15,8 @@ config.rethinkdb = {
 
 config.http = {
   host: '0.0.0.0',
-  port: process.env.ROSEBANK_LOGGER_HTTPPORT
+  loggerPort: process.env.ROSEBANK_LOGGER_HTTPPORT,
+  triagePort: process.env.ROSEBANK_LOGGER_TRIAGEPORT
 };
 
 config.mailgun = {
