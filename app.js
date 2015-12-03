@@ -38,6 +38,6 @@ if (check === false) {
 
 console.log('DB setup. Starting server...');
 server.start(function () {
-  console.log('rosebank-logger listening at http://' + config.http.host + ':' + config.http.port + '/logger');
+  console.log('rosebank-logger listening at http://' + config.http.host + ':' + config.http.loggerPort + '/logger');
   require('./lib/alerts');
 });
