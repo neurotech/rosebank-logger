@@ -15,6 +15,7 @@ RUN rm -rf /root/.npm
 
 # Expose ports
 EXPOSE 10001
+EXPOSE 10002
 
 # Run the application
 CMD [ "node", "app.js" ]
