@@ -1,7 +1,5 @@
-- css = ['pre {background: #d7425e; border: 1px solid #670719; color: #670719;}']
-
 h1 Alert Level #{item.level}: #{item.name}
 
 p #{item.name} has reported an error at #{item.time}. The error object is as follows:
 
-pre #{JSON.stringify(item)}
+pre(style='background: #d7425e; border: 1px solid #670719; color: #670719;') #{JSON.stringify(item)}
