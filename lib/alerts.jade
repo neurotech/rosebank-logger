@@ -2,4 +2,4 @@ h1 Alert Level #{item.level}: #{item.name}
 
 p #{item.name} has reported an error at #{item.time}. The error object is as follows:
 
-pre #{item}
+pre #{JSON.stringify(item)}
