@@ -1,5 +1,9 @@
-h1 ⚠️ Alert Level #{item.level}: #{item.name}
+if #{item.level} === '50'
+  h1 Alert Level - Error: #{item.name}
 
-div(style='#{styles.info}') #[strong #{item.name}] has reported an error at #{reported_time} on #{reported_date}:
+if #{item.level} === '60'
+  h1 Alert Level - FATAL: #{item.name}
+
+div(style='#{styles.info}') #[strong #{item.name}] has reported an event at #[strong #{reported_time}] on #[strong #{reported_date}]:
 
 pre(style='#{styles.pre}') #{JSON.stringify(item, null, '  ')}
