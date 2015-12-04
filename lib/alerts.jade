@@ -1,4 +1,8 @@
-h1 Alert Level #{item.level}
+if item.level === 60
+  h1(style='#{styles.event_header}') Event Type: Fatal
+
+if item.level === 50
+  h1(style='#{styles.event_header}') Event Type: Error
 
 div(style='#{styles.info}') #[strong #{item.name}] has reported an event at #[strong #{reported_time}] on #[strong #{reported_date}]:
 
