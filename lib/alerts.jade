@@ -1,5 +1,5 @@
-h1 ⚠ Alert Level #{item.level}: #{item.name}
+h1 ⚠️ Alert Level #{item.level}: #{item.name}
 
-p #{item.name} has reported an error at #{item.time}. The error object is as follows:
+div(style='#{styles.info}') #[strong #{item.name}] has reported an error at #{reported_time} on #{reported_date}:
 
 pre(style='#{styles.pre}') #{JSON.stringify(item, null, '  ')}
