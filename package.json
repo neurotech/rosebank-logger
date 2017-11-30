@@ -27,7 +27,7 @@
     "jade": "1.11.0",
     "lodash": "3.10.1",
     "mailgun-js": "0.7.6",
-    "moment": "2.10.6",
+    "moment": "2.19.3",
     "rethinkdb-init": "0.0.5",
     "rethinkdbdash": "2.1.13"
   },
